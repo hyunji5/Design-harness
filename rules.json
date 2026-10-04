@@ -1,0 +1,210 @@
+{
+  "_source": "docs/r0-context.md, docs/r5-gates.md, docs/story-service.md. 이 파일은 사람만 고친다.",
+  "prd": {
+    "path": "docs/prd.md",
+    "screens_heading": "## 4. 만들 화면"
+  },
+  "screens": [
+    "행사 달력",
+    "행사 상세",
+    "가게 신청 심사",
+    "게임 설정",
+    "손님용 휴대폰"
+  ],
+  "user_stories": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "s1": {
+    "board": "output/s1/s1-reference-board.md",
+    "notes": "output/s1/s1-reference-notes.md",
+    "link_pattern": "https?://(?:www\\.)?uibowl\\.io/[^\\s)\\]>|]+",
+    "links_per_screen": {
+      "min": 3,
+      "max": 5
+    },
+    "decisions": [
+      "가져옴",
+      "버림"
+    ],
+    "story_required_for": "가져옴"
+  },
+  "s2": {
+    "spec": "output/s2/s2-screen-spec.md",
+    "keywords": {
+      "행사 달력": [
+        "행사",
+        "날짜"
+      ],
+      "행사 상세": [
+        "준비 일정",
+        "마감일",
+        "설치 시간",
+        "일할 사람",
+        "가게 안내",
+        "돈 계산 마감일",
+        "장소 겹침",
+        "적용"
+      ],
+      "가게 신청 심사": [
+        "참여 조건",
+        "필요한 서류",
+        "서류 빠짐",
+        "조건",
+        "겹침",
+        "이유",
+        "기록 없음",
+        "합격",
+        "보류",
+        "불합격"
+      ],
+      "게임 설정": [
+        "게임 틀",
+        "브랜드 그림",
+        "문구",
+        "기간",
+        "경품",
+        "결과 내려받기"
+      ],
+      "손님용 휴대폰": [
+        "행사 안내",
+        "게임",
+        "경품 응모"
+      ]
+    }
+  },
+  "s3": {
+    "key_screens": "output/s3/s3-key-screens.md",
+    "frames": {
+      "min": 2,
+      "max": 3
+    },
+    "must_include": [
+      "행사 상세",
+      "가게 신청 심사"
+    ]
+  },
+  "approval": {
+    "path": "output/s3/s3-approval.md",
+    "fields": [
+      "결정자",
+      "결정",
+      "선택한 시안"
+    ],
+    "approved_value": "승인",
+    "decider": "디자이너",
+    "rejected_value": "반려",
+    "reject_reason_field": "반려 이유"
+  },
+  "s4": {
+    "tokens": "output/s4/s4-tokens.json",
+    "components": "output/s4/s4-components.md",
+    "screens": "output/s4/s4-screens.json"
+  },
+  "allowed": {
+    "frame": {
+      "width": 390,
+      "height": 844
+    },
+    "fontSizes": [
+      12,
+      16,
+      18,
+      20,
+      24,
+      26
+    ],
+    "radii": [
+      2,
+      6,
+      8,
+      24,
+      32,
+      50,
+      9999
+    ],
+    "spacings": [
+      1,
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      96
+    ],
+    "colors": [
+      "#000000",
+      "#ffffff",
+      "#e6e6e6",
+      "#f1f1f1",
+      "#f7f7f5",
+      "#dceeb1",
+      "#c5b0f4",
+      "#f4ecd6",
+      "#efd4d4",
+      "#c8e6cd",
+      "#f3c9b6",
+      "#1f1d3d",
+      "#ff3d8b",
+      "#1ea64a"
+    ]
+  },
+  "must_not_break": [
+    {
+      "id": "rule1",
+      "name": "AI는 이유를 보여주고, 결정은 사람이 한다",
+      "source": "docs/story-service.md 어기면 안 되는 것 1",
+      "exact_text": {
+        "가게 신청 심사": [
+          "합격",
+          "보류",
+          "불합격"
+        ],
+        "게임 설정": [
+          "올리기"
+        ]
+      },
+      "contains_text": {
+        "가게 신청 심사": [
+          "이유"
+        ]
+      },
+      "forbidden_text": [
+        "자동 불합격",
+        "자동 게시"
+      ]
+    },
+    {
+      "id": "rule2",
+      "name": "날짜를 바꾸면 관련된 일이 빠짐없이 보이고, 확인 전에는 바뀌거나 전송되지 않는다",
+      "source": "docs/story-service.md 어기면 안 되는 것 2",
+      "exact_text": {
+        "행사 상세": [
+          "적용"
+        ]
+      },
+      "contains_text": {
+        "행사 상세": [
+          "설치 시간",
+          "일할 사람",
+          "가게 안내",
+          "돈 계산 마감일",
+          "장소 겹침"
+        ]
+      },
+      "forbidden_text": []
+    }
+  ],
+  "scope": {
+    "state_file": "output/state.json",
+    "protected_files": [
+      "output/s3/s3-approval.md"
+    ]
+  },
+  "exceptions": []
+}

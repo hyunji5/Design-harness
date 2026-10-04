@@ -1,0 +1,18 @@
+{
+  "fontSize": {
+    "body": 16,
+    "title": 24
+  },
+  "radius": {
+    "md": 8,
+    "pill": 50
+  },
+  "spacing": {
+    "md": 16,
+    "lg": 24
+  },
+  "color": {
+    "ink": "#000000",
+    "canvas": "#ffffff"
+  }
+}
