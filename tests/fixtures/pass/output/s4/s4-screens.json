@@ -5,19 +5,19 @@
       "width": 390,
       "height": 844,
       "fontSizes": [
-        16,
+        15,
         24
       ],
       "radii": [
-        8,
-        50
+        16,
+        9999
       ],
       "spacings": [
         16,
         24
       ],
       "colors": [
-        "#000000",
+        "#141414",
         "#ffffff"
       ],
       "texts": [
@@ -29,19 +29,19 @@
       "width": 390,
       "height": 844,
       "fontSizes": [
-        16,
+        15,
         24
       ],
       "radii": [
-        8,
-        50
+        16,
+        9999
       ],
       "spacings": [
         16,
         24
       ],
       "colors": [
-        "#000000",
+        "#141414",
         "#ffffff"
       ],
       "texts": [
@@ -58,19 +58,19 @@
       "width": 390,
       "height": 844,
       "fontSizes": [
-        16,
+        15,
         24
       ],
       "radii": [
-        8,
-        50
+        16,
+        9999
       ],
       "spacings": [
         16,
         24
       ],
       "colors": [
-        "#000000",
+        "#141414",
         "#ffffff"
       ],
       "texts": [
@@ -85,19 +85,19 @@
       "width": 390,
       "height": 844,
       "fontSizes": [
-        16,
+        15,
         24
       ],
       "radii": [
-        8,
-        50
+        16,
+        9999
       ],
       "spacings": [
         16,
         24
       ],
       "colors": [
-        "#000000",
+        "#141414",
         "#ffffff"
       ],
       "texts": [
@@ -109,19 +109,19 @@
       "width": 390,
       "height": 844,
       "fontSizes": [
-        16,
+        15,
         24
       ],
       "radii": [
-        8,
-        50
+        16,
+        9999
       ],
       "spacings": [
         16,
         24
       ],
       "colors": [
-        "#000000",
+        "#141414",
         "#ffffff"
       ],
       "texts": [
